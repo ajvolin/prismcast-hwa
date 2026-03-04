@@ -5,7 +5,7 @@ FROM ghcr.io/linuxserver/baseimage-selkies:debiantrixie
 LABEL maintainer="ajvolin"
 
 # title
-ENV TITLE=PrismCast HWE
+ENV TITLE="PrismCast"
 
 RUN \
   echo "**** add icon ****" && \
