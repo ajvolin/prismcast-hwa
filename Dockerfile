@@ -28,6 +28,8 @@ RUN \
   echo "**** install nodejs ****" && \
   curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
   apt-get install -y nodejs && \
+  echo "**** install ffmpeg ****" && \
+  apt-get install -y ffmpeg && \
   echo "**** cleanup ****" && \
   apt-get autoclean && \
   rm -rf \
@@ -36,7 +38,10 @@ RUN \
     /var/tmp/* \
     /tmp/* && \
   npm i -g npm && \
-  npm i -g prismcast
+  npm i -g prismcast && \
+  mkdir -p /usr/local/channels-dvr/latest && \
+  ln -s /usr/bin/ffmpeg /usr/local/channels-dvr/latest/ffmpeg && \
+  chmod +x /usr/local/channels-dvr/latest/ffmpeg
 
 # add local files
 COPY /root /
