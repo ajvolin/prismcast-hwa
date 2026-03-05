@@ -11,7 +11,6 @@ services:
       - TZ=America/New_York
       - DRINODE=/dev/dri/renderD128
       - DRI_NODE=/dev/dri/renderD128
-      - TITLE=PrismCast
       - DISABLE_IPV6=True
       - SELKIES_IS_MANUAL_RESOLUTION_MODE=True
       - SELKIES_MANUAL_WIDTH=1920
