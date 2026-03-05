@@ -45,9 +45,9 @@ ENV PRISMCAST_CONTAINER=1
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
 # ports and volumes
-EXPOSE 3000 5589
+EXPOSE 3000 5589 5004
 
 VOLUME /config
 
-HEALTHCHECK --interval=30s --timeout=15s --start-period=45s \
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s \
     CMD wget -q --spider http://localhost:5589/health || exit 1

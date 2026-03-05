@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-export CHROME_BIN=/usr/bin/wrapped-chrome
+export CHROME_BIN=${ALT_CHROME_BIN:-/usr/bin/wrapped-chrome}
 
 # Resolve PrismCast directories from environment variables, falling back to the same defaults PrismCast uses internally.
 DATA_DIR="${PRISMCAST_DATA_DIR:-/config/.prismcast}"
